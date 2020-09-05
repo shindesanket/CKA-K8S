@@ -1,0 +1,35 @@
+
+# To create a Pod with Command :
+
+kubectl run nginx --image nginx
+
+# To get the list of pods
+
+kubectl get pods
+
+# To get more details about pods
+
+kubectl get pods -o wide
+
+# To get complete explanation about pods
+
+kubectl describe pod <pod-name>
+
+# TO Create a Pod with YAML ( Declarative Configuration )
+
+nginx.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    tier: front-end
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+	  
+# Command to create a using above configuration :
+
+kubectl apply -f nginx.yaml

@@ -1,0 +1,36 @@
+
+# Create ReplicaSet using YAML :
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: php-redis
+        image: gcr.io/google_samples/gb-frontend:v3
+		
+# Commands related to ReplicaSet
+
+kubectl create f replicaset definition.yml
+
+kubectl get replicaset
+
+kubectl delete replicaset myapp replicaset *Also deletes all underlying PODs
+
+kubectl replace f replicaset definition.yml
+
+kubectl scale replicas=6 f replicaset definition.yml

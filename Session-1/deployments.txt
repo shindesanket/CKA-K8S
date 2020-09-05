@@ -1,0 +1,44 @@
+
+# Create a Deployment using YAML :
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+		
+# Command to create a deployment :
+
+kubectl apply -f deployment.yaml
+
+# Other Commands :
+
+kubectl rollout status deployment/ myapp deployment
+
+kubectl rollout history deployment/ myapp deployment
+
+kubectl create f deployment definition.yml
+
+kubectl get deployments
+
+kubectl apply f deployment definition.yml
+
+kubectl set image deployment/ myapp deployment nginx =nginx:1.9.1
+
+kubectl rollout undo deployment/ myapp deployment

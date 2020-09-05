@@ -1,0 +1,32 @@
+
+Follow the steps on this link in Exam :
+
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
+
+Commands Sequence :
+
+On Master Node :
+1) sudo su
+
+2) kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address=<MasterNodeIp>
+   For Ex :
+   kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address=172.31.0.88
+   
+3) Copy 2 Commands from the output in notepad. kubeadm join command is important for next steps.
+4) Run 1st command as Regular User :
+   For Ex:
+   1) Exit
+   2) mkdir -p $HOME/.kube
+	  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+	  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+	  
+5) Deploying Weave Pod Network :
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
+On all worker nodes :
+1) sudo su
+2) Run kubeadm join command copied from Step 3 above : ( If you forgot to copy join command in 3rd step,run "kubeadm token create --print-join-command"
+For Ex:
+kubeadm join 172.31.27.223:6443 --token 14g1hm.r9ob6rvlzx711csg \
+    --discovery-token-ca-cert-hash sha256:f5503566bf4b2e1b40c6c017cef434a01a02762af27d00744424a6b067a0db12

@@ -1,0 +1,12 @@
+# Working with YAML
+
+# Create a file called using vi ~/.vimrc
+# Add following setting to it :
+set nu
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+# To check you YAML Syntax
+
+visit : http://www.yamllint.com/

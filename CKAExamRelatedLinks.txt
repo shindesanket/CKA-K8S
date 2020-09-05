@@ -1,0 +1,16 @@
+
+For details and schedule the exam :
+
+https://www.cncf.io/certification/cka/
+
+CKA 2020 Change in pattern announcement :
+
+https://training.linuxfoundation.org/cka-program-changes-2020/
+
+CKA Handbook - FAQ:
+
+https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad
+
+CKA Syllabus : 
+
+https://github.com/cncf/curriculum/blob/master/CKA_Curriculum_v1.19.pdf
