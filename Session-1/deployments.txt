@@ -1,5 +1,6 @@
 
 # Create a Deployment using YAML :
+# Name of file : deployment.yaml
 
 apiVersion: apps/v1
 kind: Deployment
@@ -27,18 +28,22 @@ spec:
 
 kubectl apply -f deployment.yaml
 
-# Other Commands :
 
-kubectl rollout status deployment/ myapp deployment
-
-kubectl rollout history deployment/ myapp deployment
-
-kubectl create f deployment definition.yml
+# This command is to list all deployments
 
 kubectl get deployments
 
-kubectl apply f deployment definition.yml
 
-kubectl set image deployment/ myapp deployment nginx =nginx:1.9.1
+# Other Commands : These commands are used to perform rolling upgrades
 
-kubectl rollout undo deployment/ myapp deployment
+Kubectl apply -f deployment.yaml
+
+kubectl rollout status deployment deployment.yaml
+
+kubectl rollout history deployment deployment.yaml
+
+kubectl set image deployment nginx-deployment nginx=nginx:1.9.1
+
+kubectl rollout undo deployment nginx-deployment
+
+kubectl rollout undo deployment nginx-deployment --to-revision=2
