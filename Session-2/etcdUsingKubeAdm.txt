@@ -1,0 +1,4 @@
+
+# Command to run ETCD with existing KubeAdm setup :
+
+kubectl exec etcd-ip-172-31-17-41 -n kube-system -- sh -c "ETCDCTL_API=3 etcdctl get / --prefix --keys-only --limit=10 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt  --key /etc/kubernetes/pki/etcd/server.key

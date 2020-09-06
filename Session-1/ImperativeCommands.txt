@@ -1,0 +1,34 @@
+
+Imperative Commands With Kubectl
+
+1) POD
+
+# Create an NGINX Pod
+
+kubectl run nginx --image=nginx
+
+# Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
+
+kubectl run nginx --image=nginx  --dry-run=client -o yaml
+
+
+2) Deployment
+
+# Create a deployment
+
+kubectl create deployment --image=nginx nginx
+
+# Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
+
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+
+3) Service
+
+# Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
+
+kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
+
+
+
+
+

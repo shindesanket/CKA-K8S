@@ -1,0 +1,11 @@
+
+Kubeadm does not deploy Kubelet 
+
+To see running kubelet process :
+ps -aux | grep kubelet
+
+systemctl status kubelet.service
+
+systemctl restart kubelet.service
+
+journalctl -u kubelet

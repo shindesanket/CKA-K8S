@@ -1,0 +1,26 @@
+Two main controllers :
+
+1) Node Controller 
+
+2) Replication Controller
+
+
+# Node Controller :
+
+Node Monitor Period : 5 Sec
+
+Node Grace Period : 40 Sec
+
+POD Eviction Timeout : 5 m
+
+# Replication Controller
+
+To make sure desired number of pods are running always
+
+To See the Options available for controller :
+
+cat /etc/kubernetes/manifests/kube-controller-manager.yaml
+
+To see the running process :
+
+ps -aux | grep kube-controller-manager
