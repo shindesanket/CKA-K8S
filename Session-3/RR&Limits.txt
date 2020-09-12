@@ -1,0 +1,12 @@
+
+Create a pod with following details :
+
+Name : mem-cpu-demo
+Image : nginx
+Requests : 
+  memory: "100Mi"
+  cpu: "0.5"
+Limits :
+  memory: "200Mi"
+  cpu: "1"
+  

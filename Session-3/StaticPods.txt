@@ -1,0 +1,17 @@
+
+1) ps -ef | grep kubelet
+
+2) Search for --config and copy its value
+
+3) grep -i static /var/lib/kubelet/config.yaml  ( This path is value copied from 2nd point )
+
+4) Copy the path in output of 3rd point
+
+5) Go to the path and check for manifest files
+
+Questions :
+
+1) Create a static pod on master node with following details :
+
+   Name: Static-pod
+   image: nginx

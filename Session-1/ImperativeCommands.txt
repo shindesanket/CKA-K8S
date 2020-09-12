@@ -9,7 +9,7 @@ kubectl run nginx --image=nginx
 
 # Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
 
-kubectl run nginx --image=nginx  --dry-run=client -o yaml
+kubectl run nginx --image=nginx  --dry-run=client -o yaml > pod.yaml
 
 
 2) Deployment
@@ -20,13 +20,13 @@ kubectl create deployment --image=nginx nginx
 
 # Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
 
-kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > deployment.yaml
 
 3) Service
 
 # Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
 
-kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
+kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml > svc.yaml
 
 
 

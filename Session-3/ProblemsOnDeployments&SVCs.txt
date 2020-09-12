@@ -1,0 +1,29 @@
+
+Practical Questions on Pod, Deployment and Services :
+
+1) Create a nginx pod with nginx image using command. ( Imperative way )
+
+2) List the pods with their node name and write output to pods.txt
+
+3) Create a nginx pod with following specification using YAML : ( Declarative way )
+   
+   Name : nginx-pod
+   Label : tier=front-end, type=lowMemory
+   Image : nginx
+   
+4) Create a deployment with following details in imperative way :
+	
+   Name : nginx-deployment-imp
+   Image : nginx
+   replicas : 5
+   
+5) Create a deployment with following details in declarative way :
+	
+   Name : nginx-deployment
+   Pod Labels : tier=front-end, type=lowMemory
+   Image : nginx
+   replicas : 5
+   
+6) Create a Cluster IP type of a service to expose deployment created in 5th task. ( Imperative way )
+
+7) Create a Cluster IP type of a service to expose deployment created in 5th task. ( Declaratvie way )

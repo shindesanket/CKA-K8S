@@ -1,5 +1,6 @@
 
 # To Create a Service using Yaml - NodePort ( 30000 - 32767 ) :
+# Name of the file : service.yaml
 
 apiVersion: v1
 kind: Service
