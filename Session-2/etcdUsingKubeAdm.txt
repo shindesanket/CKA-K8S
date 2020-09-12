@@ -1,4 +1,8 @@
 
 # Command to run ETCD with existing KubeAdm setup :
 
-kubectl exec <name-of-ETCD-Pod> -n kube-system -- sh -c "ETCDCTL_API=3 etcdctl get / --prefix --keys-only --limit=10 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt  --key /etc/kubernetes/pki/etcd/server.key
+kubectl exec etcd-ip-172-31-23-215 -n kube-system -- sh -c "ETCDCTL_API=3 etcdctl get / --prefix --keys-only --limit=10 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt  --key /etc/kubernetes/pki/etcd/server.key"
+
+kubectl exec etcd-ip-172-31-23-215 -n kube-system -- sh -c "ETCDCTL_API=3 etcdctl put firstname sanket --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt  --key /etc/kubernetes/pki/etcd/server.key"
+
+kubectl exec etcd-ip-172-31-23-215 -n kube-system -- sh -c "ETCDCTL_API=3 etcdctl get /registry/clusterroles/admin --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt  --key /etc/kubernetes/pki/etcd/server.key"
