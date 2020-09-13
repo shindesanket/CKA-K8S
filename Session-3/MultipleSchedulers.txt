@@ -1,0 +1,18 @@
+
+Steps :
+
+1) cd etc/kubernetes/manifests
+
+2) Copy kube-scheduler.yaml to home directory as my-custom-scheduler.yaml :
+
+   cp kube-scheduler.yaml /home/my-custom-scheduler.yaml
+   
+3) Add following lines in Containers -> Command :
+	- --leader-elect=false
+    - --scheduler-name=my-custom-scheduler
+	
+4) Update other things like name of a pod to my-custom-scheduler
+
+5) sudo k apply -f my-custom-scheduler.yaml
+
+6) k get pods -n kube-system
