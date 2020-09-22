@@ -1,0 +1,28 @@
+
+az aks get-credentials --resource-group AzureDevOps-AKS-Demo --name aksdemocluster
+
+kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+
+az aks browse --resource-group AzureDevOps-AKS-Demo --name aksdemocluster
+
+--listen-address
+
+--listen-port
+
+kubectl create namespace dev
+
+kubectl create namespace uat
+
+kubectl create namespace prod
+
+az aks update -n aksdemocluster -g AzureDevOps-AKS-Demo --attach-acr AzureDevOpsDemoRegistry
+
+echo -n 'mssql' | base64
+
+echo -n 'mssql' | base64 --decode
+
+https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-browse
+
+--listen-address
+
+--listen-port
