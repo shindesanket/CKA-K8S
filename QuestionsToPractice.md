@@ -45,3 +45,44 @@
 ```txt
 9) Create a static pod nginx with image nginx only on worker node 2  
 ```
+
+```txt
+10) Create a pod nginx with image nginx. Monitor the logs of nginx pod. copy these logs to nginx-logs.txt file.
+```
+
+```txt
+11) Label the worker-1 node of your cluster with rack=qa.
+```
+
+```txt
+12) Create a pod with 2 containers. One mainApp with busybox:1.28 image and other initContainer with busybox image.
+initContainer will create empty file abc.txt in etc/kubernetes folder. Main app should check if abc.txt is present at specified folder else it should exit.
+```
+
+```txt
+13) create a pod with 4 container with 4 images of your choice and store list of pods in pods-list.txt files with information of nodes.
+```
+
+```txt
+14) Create a secret named as secret123 with data "firstname: scott". Create a pod named pod-using-secret using nginx image which exports firstname as SUPERSECRET
+```
+
+```txt
+15) Drain worker-2 and create nginx deployment with 10 replicas. Store the list of pods with node name in nginx-pods.txt
+```
+
+```txt
+16) store the current CPU and memory usage details of all nodes in usage.txt
+```
+
+```txt
+17) Take current snapshot of etcd server and store it as etcd-backup.db at etc/kubernetes/etcdbackup
+```
+
+```txt
+18) Create a redis deployment with 13 replicas and make worker-node1 as unavailable and reschedule all pods on it to other active nodes.
+```
+
+```txt
+19) Add taint on worker-node2 as app=blue with noschedule policy
+```
