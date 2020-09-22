@@ -1,3 +1,6 @@
+# Project-2
+
+```txt
 IT Software Containerization
 
 Section 1: Project and developer details:
@@ -11,3 +14,4 @@ Use container image on a Google Kubernetes Engine cluster as a load-balanced set
 Scale a deployed application in Google Kubernetes Engine.
 Deploy a new version of your app.
 Deploy your app to the cluster.
+```
