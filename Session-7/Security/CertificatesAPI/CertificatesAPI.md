@@ -62,6 +62,10 @@
 openssl genrsa -out another-admin.key 2048
 ```
 
+```bash
+openssl rand -writerand .rnd
+```
+
 2. Generate a certificate signing request
 
 ```bash
