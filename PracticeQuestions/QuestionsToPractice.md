@@ -1,8 +1,8 @@
 # Questions to Practice
 
 ```txt
-1) Ensure a single instance of pod "redis" is running on each node of k8s cluster where Image=redis. Do not override existing taints.
-   Name of kubernetes object to create : ds-123
+1) Deploy a single instance of pod "redis" is running on each node of k8s cluster where Image=redis. Do not override existing taints.
+   Name of kubernetes object to create : abc-123
 ```
 
 ```txt
