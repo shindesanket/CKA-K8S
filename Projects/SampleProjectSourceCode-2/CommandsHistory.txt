@@ -1,0 +1,41 @@
+cd clouddrive
+ls
+cd wordpress/
+ls
+cd clouddrive
+ls
+cd wordpress/
+ls
+clear
+alias k=kubectl
+k get nodes
+k get pods
+k get ns
+clear
+k create ns wordpress
+ls
+k apply -f secret.yaml
+k delete secret mysql-pass
+k apply -f secret.yaml -n wordpress
+clear
+k get secret
+k get secret -n wordpress
+clear
+ls
+k apply -f pv.yaml -n wordpress
+k apply -f mysql.yaml -n wordpress
+k apply -f wordpress.yaml -n wordpress
+k get all -n wordpress
+clear
+k get all -n wordpress
+alias k=kubectl
+k get all -n wordpress
+kubectl get all -n wordpress
+clear
+k get pv
+alias k=kubectl
+clear
+k get pv
+k get sc
+kubectl get all -n wordpress
+history
