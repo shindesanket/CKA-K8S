@@ -34,4 +34,3 @@ journalctl -u kubelet
 ```bash
 cd /etc/systemd/system/kubelet.service.d/
 ```
-
