@@ -121,4 +121,7 @@ kubectl describe hpa/application-cpu
 
 ```
 
+[HPA](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
+
+https://cloud.google.com/kubernetes-engine/docs/concepts/verticalpodautoscaler
 ---
