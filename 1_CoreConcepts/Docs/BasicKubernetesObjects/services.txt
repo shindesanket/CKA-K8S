@@ -28,7 +28,7 @@ spec:
     - port: 80
 	  targetPort: 80
 
-# To Create a Service using Yaml - ClusterIp :
+# To Create a Service using Yaml - LoadBalancer :
 	  
 apiVersion: v1
 kind: Service
