@@ -38,9 +38,9 @@ kubectl get deployments
 
 Kubectl apply -f deployment.yaml
 
-kubectl rollout status deployment deployment.yaml
+kubectl rollout status deployment nginx-deployment
 
-kubectl rollout history deployment deployment.yaml
+kubectl rollout history deployment nginx-deployment
 
 kubectl set image deployment nginx-deployment nginx=nginx:1.9.1
 
