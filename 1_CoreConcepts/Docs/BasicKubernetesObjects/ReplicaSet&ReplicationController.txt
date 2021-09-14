@@ -41,5 +41,5 @@ kubectl delete replicaset frontend
 
 kubectl apply -f replicaset.yaml
 
-kubectl scale replicas=6 -f replicaset frontend
+kubectl scale replicaset frontend --replicas=6
 
