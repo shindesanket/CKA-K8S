@@ -126,10 +126,16 @@ sudo ETCDCTL_API=3 etcdctl snapshot restore --cacert=/etc/kubernetes/pki/etcd/ca
 ```bash
 cd /
 ```
+```
+
+```txt
 Go to Super user mode using following command
 ```bash
 sudo su
 ```
+```
+
+```txt
 Go to ETCD static pod configuration using following command 
 ```bash
 vi /etc/kubernetes/manifests/etcd.yaml
