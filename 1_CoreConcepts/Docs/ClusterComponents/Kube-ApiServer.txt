@@ -1,0 +1,10 @@
+
+To check running API Server pod in KubeAdm setup
+
+kubectl get pods -n kube-system
+
+To check different options used in kube-apiserver :
+
+cat /etc/kubernetes/manifests/kube-apiserver.yaml
+
+ps -aux | grep kube-apiserver
