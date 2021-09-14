@@ -33,13 +33,13 @@ kubectl delete pod <pod-id>
 
 # Observe the behaviour that replicaset creates a new pod to achieve desired state configuration
 
-kubectl apply -f replicaset.yml
+kubectl apply -f replicaset.yaml
 
 kubectl get replicaset
 
 kubectl delete replicaset frontend
 
-kubectl apply -f replicaset.yml
+kubectl apply -f replicaset.yaml
 
 kubectl scale replicas=6 -f replicaset frontend
 
