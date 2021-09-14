@@ -121,26 +121,25 @@ sudo ETCDCTL_API=3 etcdctl snapshot restore --cacert=/etc/kubernetes/pki/etcd/ca
 15. Go to "/var/lib/etcd-from-backup" and check if member folder is present
 ```
 
-```txt
+
 16. Go to root directory using following command
 ```bash
 cd /
 ```
-```
 
-```txt
-Go to Super user mode using following command
+
+17. Go to Super user mode using following command
 ```bash
 sudo su
 ```
-```
 
-```txt
-Go to ETCD static pod configuration using following command 
+18. Go to ETCD static pod configuration using following command 
 ```bash
 vi /etc/kubernetes/manifests/etcd.yaml
 ```
-Update following values
+
+```txt
+19. Update following values
 Update : - --data-dir=/var/lib/etcd-from-backup
 Add :  - --initial-cluster-token="etcd-cluster-1"
 Update : volumeMounts:
@@ -150,7 +149,7 @@ Update : - hostPath:
 ```
 
 ```txt
-17. Watch docker ps command to check if etcd pod is restarted.
+20. Watch docker ps command to check if etcd pod is restarted.
 ```
 
 ```bash
