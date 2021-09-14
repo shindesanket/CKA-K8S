@@ -53,7 +53,7 @@ sudo ETCDCTL_API=3 etcdctl get / --prefix --keys-only \
 ```bash
 kubectl create deployment nginx --image nginx
 kubectl create deployment redis --image redis
-kubctl scale deployment nginx --replicas 6
+kubectl scale deployment nginx --replicas 6
 kubectl scale deployment redis --replicas 6
 ```
 
