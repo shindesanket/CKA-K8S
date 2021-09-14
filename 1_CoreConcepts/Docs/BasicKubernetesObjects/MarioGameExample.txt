@@ -31,9 +31,10 @@ kind: Service
 metadata:
   name: mario-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: mario
   ports:
     - port: 80
       targetPort: 8080
+      nodePort: 30007
