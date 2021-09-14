@@ -6,8 +6,14 @@ Run following commands on worker nodes.
 To see running kubelet process :
 ps -aux | grep kubelet
 
+To see kubelet configuration :
+sudo cat /etc/kubernetes/kubelet.conf
+
+To check the status of kubelet service :
 systemctl status kubelet.service
 
+To Restart the kubelet service :
 systemctl restart kubelet.service
 
+To get detailed logging about kubelet events :
 journalctl -u kubelet
