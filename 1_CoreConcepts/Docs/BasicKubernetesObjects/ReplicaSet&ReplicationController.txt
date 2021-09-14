@@ -1,5 +1,5 @@
 
-# Create ReplicaSet using YAML :
+# Create ReplicaSet using YAML : replicaset.yaml
 
 apiVersion: apps/v1
 kind: ReplicaSet
@@ -25,12 +25,20 @@ spec:
 		
 # Commands related to ReplicaSet
 
-kubectl create f replicaset definition.yml
+kubectl get pods -o wide
+
+Try deleting any pod from replicaset using following command :
+
+kubectl delete pod <pod-id>
+
+Observe the behaviour that replicaset creates a new pod to achieve desired state configuration
+
+kubectl create -f replicaset replicaset.yml
 
 kubectl get replicaset
 
 kubectl delete replicaset myapp replicaset *Also deletes all underlying PODs
 
-kubectl replace f replicaset definition.yml
+kubectl scale replicas=6 -f replicaset replicaset.yml
 
-kubectl scale replicas=6 f replicaset definition.yml
+
