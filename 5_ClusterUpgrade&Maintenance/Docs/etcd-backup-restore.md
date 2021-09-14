@@ -122,18 +122,25 @@ sudo ETCDCTL_API=3 etcdctl snapshot restore --cacert=/etc/kubernetes/pki/etcd/ca
 ```
 
 
+```txt
 16. Go to root directory using following command
+```
 ```bash
 cd /
 ```
 
 
+```txt
 17. Go to Super user mode using following command
+```
 ```bash
 sudo su
 ```
 
+
+```txt
 18. Go to ETCD static pod configuration using following command 
+```
 ```bash
 vi /etc/kubernetes/manifests/etcd.yaml
 ```
@@ -157,7 +164,7 @@ watch "docker ps"
 ```
 
 ```txt
-18. Check if nginx and redis deployments are restored
+21. Check if nginx and redis deployments are restored
 ```
 
 ```bash
