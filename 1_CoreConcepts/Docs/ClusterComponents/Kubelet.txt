@@ -1,6 +1,8 @@
 
 Kubeadm does not deploy Kubelet 
 
+Run following commands on worker nodes.
+
 To see running kubelet process :
 ps -aux | grep kubelet
 
