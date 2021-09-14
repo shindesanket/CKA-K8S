@@ -5,6 +5,6 @@ kubectl get pods -n kube-system
 
 To check different options used in kube-apiserver :
 
-cat /etc/kubernetes/manifests/kube-apiserver.yaml
+sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml
 
 ps -aux | grep kube-apiserver
