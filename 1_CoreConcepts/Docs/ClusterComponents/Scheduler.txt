@@ -1,5 +1,5 @@
 
-Scheduler only decided which pod will go on which node.
+Scheduler only decides which pod will go on which node.
 
 To see the options :
 
