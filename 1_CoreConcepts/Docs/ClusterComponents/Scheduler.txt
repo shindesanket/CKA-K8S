@@ -3,7 +3,7 @@ Scheduler only decides which pod will go on which node.
 
 To see the options :
 
-cat /etc/kubernetes/manifests/kube-scheduler.yaml
+sudo cat /etc/kubernetes/manifests/kube-scheduler.yaml
 
 To see the running process :
 
