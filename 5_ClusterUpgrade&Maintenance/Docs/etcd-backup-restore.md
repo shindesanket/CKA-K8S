@@ -110,7 +110,7 @@ sudo ETCDCTL_API=3 etcdctl snapshot restore -h
 ```
 
 ```txt
-14. Command to save the Snapshot of ETCD.
+14. Command to restore the Snapshot of ETCD.
 ```
 
 ```bash
