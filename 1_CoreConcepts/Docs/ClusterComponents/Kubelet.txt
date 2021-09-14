@@ -10,10 +10,10 @@ To see kubelet configuration :
 sudo cat /etc/kubernetes/kubelet.conf
 
 To check the status of kubelet service :
-systemctl status kubelet.service
+sudo systemctl status kubelet.service
 
 To Restart the kubelet service :
-systemctl restart kubelet.service
+sudo systemctl restart kubelet.service
 
 To get detailed logging about kubelet events :
-journalctl -u kubelet
+sudo journalctl -u kubelet
