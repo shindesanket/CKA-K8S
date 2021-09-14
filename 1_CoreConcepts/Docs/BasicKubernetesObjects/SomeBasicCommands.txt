@@ -10,3 +10,6 @@ kubectl get po -n kube-system
 kubectl get deployments
 # OR
 kubectl get deploy
+
+# For deleting all kuberenetes objects in single command on default namespace
+kubectl delete all --all
