@@ -122,17 +122,25 @@ sudo ETCDCTL_API=3 etcdctl snapshot restore --cacert=/etc/kubernetes/pki/etcd/ca
 ```
 
 ```txt
-16. Go to ETCD static pod configuration at etc/kuberenetes/manifest and Update following values
+16. Go to root directory using following command
+```bash
+cd /
+```
+Go to Super user mode using following command
+```bash
+sudo su
+```
+Go to ETCD static pod configuration using following command 
+```bash
+vi /etc/kubernetes/manifests/etcd.yaml
+```
+Update following values
 Update : - --data-dir=/var/lib/etcd-from-backup
 Add :  - --initial-cluster-token="etcd-cluster-1"
 Update : volumeMounts:
          - mountPath: /var/lib/etcd-from-backup
 Update : - hostPath:
          path: /var/lib/etcd-from-backup
-```
-
-```bash
-sudo vi etcd.yaml
 ```
 
 ```txt
