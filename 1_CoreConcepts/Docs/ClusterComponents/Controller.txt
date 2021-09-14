@@ -19,7 +19,7 @@ To make sure desired number of pods are running always
 
 To See the Options available for controller :
 
-cat /etc/kubernetes/manifests/kube-controller-manager.yaml
+sudo cat /etc/kubernetes/manifests/kube-controller-manager.yaml
 
 To see the running process :
 
