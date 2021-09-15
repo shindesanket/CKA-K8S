@@ -10,7 +10,7 @@ metadata:
 spec:
   containers:
   - name: event-simulator
-    image: kodekloud/event-simulator
+    image: sankethshinde/event-simulator
 ```
 
 ## Command to see the logs
