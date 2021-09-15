@@ -7,7 +7,7 @@ To see running kubelet process :
 ps -aux | grep kubelet
 
 To see kubelet configuration :
-sudo cat /etc/kubernetes/kubelet.conf
+sudo cat /var/lib/kubelet/config.yaml
 
 To check the status of kubelet service :
 sudo systemctl status kubelet.service
