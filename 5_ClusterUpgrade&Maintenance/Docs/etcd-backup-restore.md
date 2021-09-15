@@ -118,6 +118,15 @@ sudo ETCDCTL_API=3 etcdctl snapshot restore --cacert=/etc/kubernetes/pki/etcd/ca
 ```
 
 ```txt
+ Perform following steps to go in root mode
+```
+```bash
+cd /
+```
+```bash
+sudo su
+```
+```txt
 15. Go to "/var/lib/etcd-from-backup" and check if member folder is present
 ```
 
