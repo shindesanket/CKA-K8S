@@ -22,7 +22,7 @@ kubectl logs -f event-simulator-pod
 ## Command for checking logs of single container in multi container environment
 
 ```bash
-kubectl logs –f event-simulator-pod event-simulator
+kubectl logs event-simulator-pod event-simulator
 ```
 
 ```txt
