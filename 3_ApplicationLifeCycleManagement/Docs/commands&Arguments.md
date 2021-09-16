@@ -40,7 +40,7 @@ kubectl logs command-demo
 apiVersion: v1
 kind: Pod
 metadata:
-  name: command-demo
+  name: command-demo-1
   labels:
     purpose: demonstrate-command
 spec:
