@@ -9,7 +9,6 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: nginx-ds
-  namespace: kube-system
   labels:
     k8s-app: nginx
 spec:
