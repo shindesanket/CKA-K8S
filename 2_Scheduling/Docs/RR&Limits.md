@@ -18,7 +18,7 @@ metadata:
 spec:
   containers:
   - name: app
-    image: images.my-company.example/app:v4
+    image: nginx
     resources:
       requests:
         memory: "64Mi"
