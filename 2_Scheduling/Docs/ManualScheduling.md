@@ -1,7 +1,7 @@
 
-## Demo Example :
+# Demo Example :
 
-# 1) Create a pod with redis image which always gets scheduled on worker node 2
+## 1) Create a pod with redis image which always gets scheduled on worker node 2
 
 ```bash
 apiVersion: v1
@@ -15,6 +15,6 @@ spec:
   nodeName: <node-name>
 ```
 
-To Practice :
+## To Practice :
 
-2) Create a pod with nginx image which always gets scheduled on worker node 1
+## 2) Create a pod with nginx image which always gets scheduled on worker node 1
