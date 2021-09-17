@@ -11,7 +11,7 @@
 
 Observe the output of following commands :
 
-Kubectl get pods --selector type=cache
+kubectl get pods --selector type=cache
 
-Kubectl get pods --selector type=webServer,tier=frontEnd
+kubectl get pods --selector type=webServer,tier=frontEnd
 
