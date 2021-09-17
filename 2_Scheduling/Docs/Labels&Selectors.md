@@ -1,13 +1,9 @@
 
-1) Create a pod :
-   Name : nginx
-   Image : nginx
-   Label : type=webServer, tier=frontEnd
+## 1) Create a pod :
+   Name : nginx, Image : nginx, Label : type=webServer and tier=frontEnd
 
-2) Create a pod :
-   Name : redis
-   Image : redis
-   Label : type=cache
+## 2) Create a pod :
+   Name : redis, Image : redis, Label : type=cache
   
 Hint : Use below command to generarte pod manifest 
 
