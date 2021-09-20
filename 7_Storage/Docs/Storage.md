@@ -110,7 +110,7 @@ metadata:
   name: mysql-pod
   namespace: db
 spec:
-  nodeName: <worker node 1>
+  nodeName: <<worker node 1>>
   containers:
   - image: mysql
     name: mysql-container
