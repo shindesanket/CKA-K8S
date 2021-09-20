@@ -22,7 +22,7 @@ kind: Pod
 metadata:
   name: number-generator-pod
 spec:
-  nodeName: ip-172-31-27-9
+  nodeName: <<Worker node name>>
   restartPolicy: Never
   containers:
   - image: alpine
