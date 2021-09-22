@@ -15,14 +15,14 @@ ip link
 3). What is the IP address assigned to master node on this interface?
 
 ```bash
-ifconfig eth0
+ifconfig
 ip addr
 ```
 
 4). What is the MAC address of the inteface on Master node.
 
 ```bash
-ifconfig eth0
+ifconfig
 ip link
 ```
 
