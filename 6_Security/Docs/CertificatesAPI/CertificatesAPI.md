@@ -16,78 +16,38 @@
   $ openssl req -new -key jane.key -subj "/CN=jane" -out jane.csr 
   ```
 - Sends the request to the administrator and the adminsitrator takes the key and creates a CSR object, with kind as "CertificateSigningRequest" and a encoded "jane.csr"
+  ```bash
+  apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  name: myuser
+spec:
+  request: <<< CSR in base 64 format >>>
+  signerName: kubernetes.io/kube-apiserver-client
+  usages:
+  - client auth
   ```
-  apiVersion: certificates.k8s.io/v1beta1
-  kind: CertificateSigningRequest
-  metadata:
-    name: jane
-  spec:
-    groups:
-    - system:authenticated
-    usages:
-    - digital signature
-    - key encipherment
-    - server auth
-    request:
-      <certificate-goes-here>
+  
+  ```bash
+  cat myuser.csr | base64 | tr -d "\n"
+  kubectl apply -f jane.yaml
   ```
-  $ cat jane.csr |base64 
-  $ kubectl create -f jane.yaml
-  ```
-
+  
 - To list the csr's
-  ```
-  $ kubectl get csr
+  ```bash
+  kubectl get csr
   ```
 - Approve the request
-  ```
+  ```bash
   $ kubectl certificate approve jane
   ```
 - To view the certificate
-  ```
+  ```bash
   $ kubectl get csr jane -o yaml
   ```
 - To decode it
+  ```bash
+  $ echo "<certificate>" | base64 --decode
   ```
-  $ echo "<certificate>" |base64 --decode
-  ```
-
-### Practice Certificates API
-
----
-
-1. A user first creates the key
-
-```bash
-openssl genrsa -out another-admin.key 2048
-```
-
-```bash
-openssl rand -writerand .rnd
-```
-
-2. Generate a certificate signing request
-
-```bash
-openssl req -new -key another-admin.key -subj "/CN=abc-admin" -out another-admin.csr
-
-cat another-admin.csr | base64 | tr -d "\n"
-```
-
-3. The administrator takes the content in base64 format and creates a certificate signing request object
-
-```yml
-apiVersion: certificates.k8s.io/v1beta1
-kind: CertificateSigningRequest
-metadata:
-  name: abc-admin
-spec:
-  groups:
-  - system:authenticated
-  request:
-    <Output of base64 CSR>
-  usages:
-  - client auth
-```
 
 ---
