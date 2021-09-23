@@ -2,7 +2,7 @@
 # ImageSecurity
 
 ```bash
-kubectl run nginx-demo --image=democka.azurecr.io/samples/nginx:latest --dry-run=client --restart=Never -o yaml > nginx-pod.yaml
+kubectl run nginx-demo --image=aksdemo123.azurecr.io/shindesanket/delphimeproject:15 --dry-run=client --restart=Never -o yaml > nginx-pod.yaml
 ```
 
 ```bash
@@ -18,8 +18,8 @@ kubectl delete pod nginx-pod
 ```
 
 ```bash
-kubectl create secret docker-registry myregistrykey --docker-server=democka.azurecr.io \
-        --docker-username=democka --docker-password=PgGaSLOIMuVw3M9m7+qzYoAxmxDGPt13 \
+kubectl create secret docker-registry myregistrykey --docker-server=aksdemo123.azurecr.io \
+        --docker-username=aksdemo123 --docker-password=xv7UQMMgv60==/sAZnSLQSfxm6eQKQoe \
         --docker-email=DUMMY_DOCKER_EMAIL
 ```
 
