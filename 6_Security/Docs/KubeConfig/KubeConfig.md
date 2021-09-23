@@ -12,7 +12,7 @@
   ```
 - You can specify the kubeconfig file with kubectl config view with "--kubeconfig" flag
   ```
-  $ kubectl config veiw --kubeconfig=my-custom-config
+  $ kubectl config view --kubeconfig=my-custom-config
 
 - How do you update your current context? Or change the current context
   ```
