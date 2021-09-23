@@ -20,7 +20,7 @@
   ```
   - kubectl config help
   ```
-  $ kubeclt config -h
+  $ kubectl config -h
   ```
 ## Practice
 
