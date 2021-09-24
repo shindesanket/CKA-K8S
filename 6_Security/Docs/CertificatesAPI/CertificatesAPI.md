@@ -17,16 +17,16 @@
   ```
 - Sends the request to the administrator and the adminsitrator takes the key and creates a CSR object, with kind as "CertificateSigningRequest" and a encoded "jane.csr"
   
-```bash
-  apiVersion: certificates.k8s.io/v1
-  kind: CertificateSigningRequest
-  metadata:
-    name: jane
-  spec:
-    request: <<< CSR in base 64 format >>>
-    signerName: kubernetes.io/kube-apiserver-client
-    usages:
-    - client auth
+```yml
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  name: jane
+spec:
+  request: <<< CSR in base 64 format >>>
+  signerName: kubernetes.io/kube-apiserver-client
+  usages:
+  - client auth
  ```
   
   ```bash
