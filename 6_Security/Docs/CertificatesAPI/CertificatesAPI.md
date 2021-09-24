@@ -21,7 +21,7 @@
   apiVersion: certificates.k8s.io/v1
   kind: CertificateSigningRequest
   metadata:
-    name: myuser
+    name: jane
   spec:
     request: <<< CSR in base 64 format >>>
     signerName: kubernetes.io/kube-apiserver-client
@@ -30,7 +30,7 @@
  ```
   
   ```bash
-  cat myuser.csr | base64 | tr -d "\n"
+  cat jane.csr | base64 | tr -d "\n"
   kubectl apply -f jane.yaml
   ```
   
