@@ -39,7 +39,7 @@ spec:
   imagePullSecrets:
   - name: myregistrykey
   containers:
-  - image: democka.azurecr.io/samples/nginx:latest
+  - image: aksdemo123.azurecr.io/shindesanket/delphimeproject:15
     name: nginx-demo
     resources: {}
   dnsPolicy: ClusterFirst
