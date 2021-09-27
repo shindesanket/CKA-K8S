@@ -4,6 +4,7 @@
 
 ```bash
 sudo su -
+cd /
 mkdir -p /k8s/auth
 ```
 
