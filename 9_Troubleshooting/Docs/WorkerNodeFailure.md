@@ -54,4 +54,13 @@ journalctl -u kubelet
 
 ```bash
 cd /etc/systemd/system/kubelet.service.d/
+sudo cat 10-kubeadm.conf
 ```
+Check for kubelet config file path
+
+```bash
+sudo cat /var/lib/kubelet/config.yaml
+```
+
+Search for staticPodPath and observe it is "etc/kubernetes/manifest"
+
