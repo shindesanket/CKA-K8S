@@ -18,3 +18,11 @@ kubectl logs <scheduler pod name> -n kube-system
 ```bash
 sudo journalctl -u <controle plane pod name>
 ```
+
+3) Go to etc/kubernetes/manifest and open yaml file of control plane components
+
+```bash
+sudo cat <<yaml file>>
+```
+
+
