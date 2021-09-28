@@ -25,4 +25,14 @@ sudo journalctl -u <controle plane pod name>
 sudo cat <<yaml file>>
 ```
 
+4) Steps to troubleshoot control plane components
+
+```txt
+1) Check the logs for that control plane pod
+
+2) Go to ect/kubernetes/manifest and open yaml manifest for respective yaml
+
+3) Check for certificates and ports
+```
+
 
