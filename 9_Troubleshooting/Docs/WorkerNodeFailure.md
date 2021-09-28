@@ -8,7 +8,7 @@ kubectl get nodes
 ```
 
 ```bash
-ssh key-gen
+ssh-keygen
 cd ~/.ssh
 cat id_rsa.pub
 ```
