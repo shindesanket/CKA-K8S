@@ -26,7 +26,7 @@ Horizontal Pod Autoscaler - Deals with pods. Adds new pods when memory or cpu is
 
 7). Try to add strong monitoring solution. (Prometheus, Azure monitor, AWS Cloudwatch)
 
-8). Learn about Helm ( Package Manager for Kubernetes ). Deploy resources using Helm Chart.
+8). Learn about Helm ( Package Manager for Kubernetes ). Deploy resources using Helm Chart. ( https://helm.sh/ )
 
 9). Implement CI/CD Setup.
 
