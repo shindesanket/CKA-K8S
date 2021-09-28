@@ -8,6 +8,27 @@ kubectl get nodes
 ```
 
 ```bash
+ssh key-gen
+cd ~/.ssh
+cat id_rsa.pub
+```
+
+```txt
+Click on worker1 on the lab and go to worker node 1
+```
+
+```bash
+cd ~/.ssh
+sudo vi authorized_keys
+```
+
+```txt
+Paste the content copied from id_rsa.pub and go back to the master node
+```
+
+Run below commands on master node
+
+```bash
 ssh worker-1
 ```
 
